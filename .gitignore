@@ -10,8 +10,18 @@ __pycache__/
 .vscode/
 
 # Data & outputs (typically large)
-output/
+# Ignore everything under output by default...
+output/*
+# ...but keep the final artifacts we want to publish
+!output/figures/
+!output/figures/**
+!output/viz/
+!output/viz/**
+
+# Ignore CSVs by default (raw datasets can be huge)
 *.csv
+# ...but keep viz-ready CSVs
+!output/viz/*.csv
 
 # If you want to commit a dataset, either remove `*.csv` above or use Git LFS.
 # If you want to keep viz-ready exports/images in git, comment out `output/` above.
