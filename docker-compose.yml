@@ -1,0 +1,10 @@
+services:
+  spark:
+    image: apache/spark:3.5.0
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+    command:
+      - bash
+      - -lc
+      - /opt/spark/bin/spark-submit --master local[*] /workspace/spark_explore_output.py --output-dir /workspace/output --show 20 --export --export-format csv

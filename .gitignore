@@ -1,0 +1,17 @@
+# Python
+.venv/
+.venv*/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+.vscode/
+
+# Data & outputs (typically large)
+output/
+*.csv
+
+# If you want to commit a dataset, either remove `*.csv` above or use Git LFS.
+# If you want to keep viz-ready exports/images in git, comment out `output/` above.
